@@ -7,3 +7,6 @@ It had the intention to be a beautiful and cool homepage to show all the project
  - CSS 📘
  - JavaScript 📒
 
+# Demo
+You can preview the site [here](https://rodrigaum.tk)
+
