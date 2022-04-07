@@ -73,5 +73,5 @@ setInterval(() => {
   //
   // Initial value . 1 / 1000 * 60 * 60 * 24 * 365 * 1
   //
-  liveAge.innerHTML = actualAgeParsed;
+  liveAge.innerText = actualAgeParsed.toString().substring(0, 9);
 }, 50);
