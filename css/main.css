@@ -486,91 +486,8 @@ img {
   max-width: 1200px;
 }
 
-.skill-lvl-legend {
-  flex: 1;
-
-  display: none;
-  transition: 0.5s;
-}
-
 .visible {
   display: block;
-}
-
-.skill-lvl-legend h1 {
-  font-size: 1.75rem;
-
-  width: 60%;
-  margin-left: auto;
-}
-
-.skill-lvl-legend h1::before {
-  content: url(../img/icons/quadradin.svg);
-  margin-right: 8px;
-  text-align: center;
-}
-
-.skill-lvl-legend-text {
-  max-width: 1200px;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.legend-point {
-  flex: 1 1 380px;
-  max-width: 380px;
-  background: #252e3b;
-  padding: 30px 15px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  margin: 5px 15px;
-}
-
-.legend-point:nth-of-type(1) {
-  order: 0;
-}
-.legend-point:nth-of-type(3) {
-  order: 1;
-}
-.legend-point:nth-of-type(2) {
-  order: 2;
-}
-.legend-point:nth-of-type(4) {
-  order: 2;
-}
-.legend-point:nth-of-type(5) {
-  order: 2;
-}
-
-.hundred {
-  flex: 1 1 100%;
-  max-width: 100%;
-  background: url(../img/bluefire.gif) 100%;
-
-  color: white;
-  text-shadow: 2px 2px 0 black;
-}
-
-.hundred .legend-percentage {
-  border-bottom: 5px solid var(--primary);
-  margin-bottom: 10px;
-}
-
-.legend-percentage {
-  color: var(--primary);
-  display: block;
-  font-size: 2rem;
-  max-width: 100%;
-}
-
-.legend-percentage-desc {
-  font-size: 1.2rem;
-  max-width: 100%;
 }
 
 .skills-lvl {
@@ -602,38 +519,6 @@ img {
 @media (max-width: 768px) {
   .skills-lvl {
     grid-row-gap: 60px;
-  }
-
-  .skill-lvl-legend h1 {
-    padding: 20px;
-    margin: 0;
-    width: 100%;
-  }
-
-  .legend-point {
-    flex: 1 1 100%;
-    max-width: 100%;
-    padding: 30px 0;
-    margin: 10px 20px;
-  }
-
-  .legend-percentage-desc {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .legend-point:nth-of-type(1),
-  .legend-point:nth-of-type(3),
-  .legend-point:nth-of-type(2),
-  .legend-point:nth-of-type(4),
-  .legend-point:nth-of-type(5) {
-    order: 0;
-  }
-
-  .hundred {
-    background-size: 129%;
-    background-position: center;
-    background-repeat: no-repeat;
   }
 }
 
@@ -708,13 +593,6 @@ img {
   margin-bottom: 0;
 }
 
-.read-more {
-  margin: 20px;
-}
-
-#readMore {
-  color: var(--primary);
-}
 
 /* Lab */
 .lab {
