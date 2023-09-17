@@ -1,11 +1,12 @@
-const header = document.querySelector(".sticky");
-const headerContent = document.querySelector(".sticky .header");
-
 const handleHeaderSticky = () => {
+  const header = document.querySelector(".sticky");
+  const root = document.querySelector(":root");
+  const rootComputedStyle = getComputedStyle(root);
+
   if (header.offsetTop !== 0) {
-    header.style.background = "linear-gradient(#2A3443,#252E3B,#1B222C)";
+    root.style.setProperty("--header-bg", rootComputedStyle.getPropertyValue("--header-off-bg"));
   } else {
-    header.style.background = "#202833";
+    root.style.setProperty("--header-bg", "");
   }
 };
 
