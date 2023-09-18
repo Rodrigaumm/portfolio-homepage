@@ -774,14 +774,14 @@ section {
 /* Footer */
 .footer {
   background: #1b222c;
-  padding: 60px 0;
+  padding: 40px 0;
 
   position: relative;
   overflow-y: hidden;
 }
 
 .footer p {
-  max-width: 1200px;
+  max-width: 60%;
   margin: 0 auto;
   text-align: center;
   font-size: 1.25rem;
