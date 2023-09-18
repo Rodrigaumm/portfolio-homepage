@@ -7,7 +7,7 @@
 
 const liveAge = document.getElementById("age");
 
-setInterval(() => {
+(function updateAge() {
   const actualAgeMs = new Date() - new Date(2003, 7, 22); //The operation results in the age in miliseconds
 
   const actualAgeParsed = actualAgeMs / (1000 * 60 * 60 * 24 * 365);
@@ -73,5 +73,7 @@ setInterval(() => {
   //
   // Initial value . 1 / 1000 * 60 * 60 * 24 * 365 * 1
   //
-  liveAge.innerText = actualAgeParsed.toString().substring(0, 10);
-}, 50);
+  liveAge.innerText = actualAgeParsed.toString().substring(0, 10).replace(".", ",");
+
+  setTimeout(updateAge, 2500);
+})();

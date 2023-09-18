@@ -27,6 +27,7 @@ section {
 body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: white;
+  background: var(--primary);
 }
 
 li {
@@ -220,6 +221,14 @@ img {
   }
 }
 
+section {
+  margin-bottom: 30px;
+}
+
+.contact {
+  margin-bottom: 0;
+}
+
 /* Radial-background */
 .radial-background {
   background: radial-gradient(50% 50% at 50% 50%, #2f3e52 27.6%, var(--primary) 100%);
@@ -329,14 +338,14 @@ img {
 }
 
 /* About */
-.about-container {
+.about {
   background: url(../img/fundo2.svg), url(../img/fundo1.svg) var(--primary);
   background-size: contain;
 }
 
 .about-content {
   padding: 40px 0;
-  max-width: 1200px;
+  max-width: 60%;
   margin: 0 auto;
 
   display: flex;
@@ -347,15 +356,12 @@ img {
 
 .about-info {
   /* flex: 1 1 300px; */
-  width: 63%;
-  margin-left: auto;
-  align-self: flex-start;
   /* max-width: 300px; */
   /* margin: 40px auto; */
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .about-info > img {
@@ -385,20 +391,11 @@ img {
 
 .about-text {
   flex: 1 1;
-  align-self: flex-start;
-}
-
-@media (max-width: 1200px) {
-  .about-text {
-    margin: 20px;
-  }
+  width: 100%;
 }
 
 .about-content h1 {
-  margin-bottom: 40px;
-  width: 60%;
-  margin-left: auto;
-
+  margin-bottom: 24px;
   font-size: 1.75rem;
 }
 
@@ -409,7 +406,7 @@ img {
 }
 
 .about-text h2 {
-  margin-bottom: 60px;
+  margin-bottom: 24px;
   border-bottom: 4px solid var(--secondary);
   font-size: 1.35rem;
 }
@@ -420,7 +417,7 @@ img {
   text-align: justify;
 }
 
-.about-text a {
+.about-text a, .about-text span {
   color: var(--secondary);
 }
 
@@ -428,12 +425,18 @@ img {
   margin-top: 30px;
 }
 
+@media (max-width: 1200px) {
+  .about-text {
+    margin: 20px;
+  }
+}
+
 @media (max-width: 800px) {
-  .about-container {
+  .about {
     background-size: cover;
   }
 
-  .about-container h1 {
+  .about h1 {
     padding: 20px;
     width: 100%;
   }
@@ -467,7 +470,7 @@ img {
   padding: 30px 0;
 }
 
-.skills-container {
+.skills-content {
   max-width: 60%;
   margin: 0 auto;
   display: flex;
@@ -475,11 +478,11 @@ img {
   align-items: center;
 }
 
-.skills-container h1 {
+.skills-content h1 {
   font-size: 1.75rem;
 }
 
-.skills-container h1::before {
+.skills-content h1::before {
   content: url(../img/icons/quadradin.svg);
   margin-right: 8px;
 }
@@ -495,7 +498,7 @@ img {
 }
 
 @media (max-width: 1200px) {
-  .skills-container h1 {
+  .skills-content h1 {
     margin: 0 20px 60px 20px;
   }
 
