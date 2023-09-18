@@ -44,8 +44,6 @@ img {
   max-width: 100%;
 }
 
-/* Estilos*/
-
 /* Header */
 .sticky {
   position: -webkit-sticky;
@@ -90,7 +88,7 @@ img {
 .header-nav .menu-mobile div {
   display: none;
   margin-left: 30px;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .header-nav .menu-mobile div svg {
@@ -132,8 +130,10 @@ img {
 
 @media (max-width: 1200px) {
   .header {
-    justify-content: center;
+    max-width: 80%;
+    /* justify-content: center; */
   }
+
   .header-brand {
     margin: 0 0 10px 0 0;
     align-self: center;
@@ -142,38 +142,30 @@ img {
   .header {
     padding: 30px 0 10px 0;
   }
-}
 
-@media (max-width: 870px) {
-  .header-brand {
-    margin-bottom: 30px;
-  }
-
-  .header-nav {
-    flex: 1 1 100%;
-  }
-
-  .header-nav ul {
-    justify-content: center;
+  .header-nav ul li + li {
+    margin-left: 30px;
   }
 }
 
-@media (max-width: 657px) {
+@media (max-width: 960px) {
   .sticky {
     position: sticky;
     left: 0;
   }
 
   .header {
+    flex-direction: column;
+    align-items:center;
     padding: 30px 0 20px 0;
   }
 
   .header-brand {
-    margin: 0 0 10px 0;
+    margin-bottom: 16px;
   }
 
   .header-nav {
-    flex: 1 1 100%;
+    width: 100%;
   }
 
   .header-nav .menu-mobile {
@@ -193,7 +185,7 @@ img {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     grid-gap: 20px;
-    animation: mobileDropdown 0.1s ease-in forwards;
+    animation: mobileDropdown 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 
   .header-nav ul li {
@@ -225,7 +217,6 @@ section {
   margin-bottom: 100px;
 }
 
-
 /* Introduction */
 .introduction {
   width: 100%;
@@ -238,7 +229,6 @@ section {
   padding: 30px 0;
 
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -295,7 +285,9 @@ section {
 }
 
 @media (max-width: 1200px) {
-  .introduction {
+  .introduction-content {
+    max-width: 80%;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -311,6 +303,10 @@ section {
 @media (max-width: 637px) {
   .introduction {
     padding: 0;
+  }
+
+  .introduction-content {
+    max-width: 100%;
   }
 
   .introduction-side-text {
@@ -352,10 +348,6 @@ section {
 }
 
 .about-info {
-  /* flex: 1 1 300px; */
-  /* max-width: 300px; */
-  /* margin: 40px auto; */
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -435,7 +427,10 @@ section {
 
   .about h1 {
     padding: 20px;
-    width: 100%;
+  }
+
+  .about-content {
+    max-width: 80%;
   }
 
   .about-info {
@@ -444,9 +439,13 @@ section {
     align-items: center;
   }
 
+  .about-text {
+    width: unset;
+  }
+
   .about-text h2 {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
+    font-size: 1.1rem;
+    margin-bottom: 16px;
   }
 
   .about-text p {
@@ -491,27 +490,8 @@ section {
   grid-template-columns: repeat(6, 1fr);
   justify-content: space-between;
   grid-row-gap: 50px;
+  grid-column-gap: 50px;
   width: 100%;
-}
-
-@media (max-width: 1200px) {
-  .skills-content h1 {
-    margin: 0 20px 60px 20px;
-  }
-
-  .skills-lvl {
-    grid-template-columns: 200px;
-    justify-content: center;
-    grid-row-gap: 150px;
-    margin: 0;
-    margin-bottom: 60px;
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-lvl {
-    grid-row-gap: 60px;
-  }
 }
 
 .skill {
@@ -529,6 +509,35 @@ section {
 .skill-label {
   font-size: 1.2rem;
   margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+  .skills-lvl {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    grid-row-gap: 60px;
+    margin: 0;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-content h1 {
+    margin: 0;
+    margin-bottom: 32px;
+  }
+
+  .skills-lvl {
+    grid-row-gap: 100px;
+  }
+
+  .skill-label {
+    font-size: 1rem;
+  }
+
+  .skill svg[data-icon] {
+    font-size: 60px;
+  }
 }
 
 /* Lab */
@@ -659,14 +668,8 @@ section {
 
 @media (max-width: 768px) {
   .lab .lab-content h1 {
-    margin: 0;
-    padding: 0 20px 30px 20px;
+    margin-bottom: 16px;
     display: block;
-    width: 100%;
-  }
-
-  .lab-projects {
-    padding: 60px 0;
   }
 
   .card-container {
@@ -742,32 +745,30 @@ section {
 }
 
 @media (max-width: 768px) {
+  .contact-content {
+    max-width: 80%;
+  }
+
   .contact-content h1 {
-    margin: 0;
-    padding: 20px;
-    width: 100%;
+    margin-bottom: 16px;
   }
 
   .contact-content p {
-    padding: 20px;
+    line-height: unset;
+    text-align: center;
+    font-size: 1rem;
   }
 
   .contact-info {
     grid-template-columns: 1fr;
   }
 
-  #contactLinkedin {
-    justify-self: start;
-    margin-left: -5px;
-  }
-
   .contact-info .contact-media a {
     font-size: 1rem;
   }
 
-  #contactEmail {
-    justify-self: start;
-    width: 100%;
+  #contact {
+    margin-bottom: 60px;
   }
 }
 
@@ -802,4 +803,11 @@ section {
   position: absolute;
   bottom: -10px;
   left: 0;
+}
+
+@media (max-width: 768px) {
+  .footer p {
+    max-width: 100%;
+    font-size: 1.1rem;
+  }
 }
