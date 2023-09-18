@@ -468,15 +468,15 @@ img {
 }
 
 .skills-container {
-  max-width: 1200px;
+  max-width: 60%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .skills-container h1 {
   font-size: 1.75rem;
-
-  width: 60%;
-  margin-left: auto;
 }
 
 .skills-container h1::before {
@@ -484,26 +484,14 @@ img {
   margin-right: 8px;
 }
 
-.skills-content {
-  display: flex;
-  flex-direction: column;
-  max-width: 1200px;
-}
-
-.visible {
-  display: block;
-}
-
 .skills-lvl {
   flex: 1;
-  margin: 60px 80px 60px 0;
-  padding-left: 20px;
-
+  margin: 60px 0 60px 0;
   display: grid;
-  grid-template-columns: 150px 150px 150px;
+  grid-template-columns: repeat(6, 1fr);
   justify-content: space-between;
-  grid-row-gap: 100px;
-  max-width: 1200px;
+  grid-row-gap: 50px;
+  width: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -535,68 +523,13 @@ img {
 }
 
 .skill svg[data-icon] {
-  color: white;
   font-size: 80px;
-}
-
-.skill svg[data-icon="logos-html-5"] path[fill="#000"],
-.skill svg[data-icon="logos-css-3"] path[fill="#000"] {
-  display: none;
-}
-
-.progress-bar {
-  background: #151b24;
-  height: 8px;
-  width: 50%;
-  margin: 10px;
-  border-radius: 5px;
-}
-
-.progress {
-  height: 8px;
-  border-radius: 5px;
-}
-
-.html-progress {
-  background: #e44d26;
-  width: 75%;
-}
-
-.css-progress {
-  background: #2965f1;
-  width: 60%;
-}
-
-.js-progress {
-  background: #f7df1e;
-  width: 50%;
-}
-
-.node-progress {
-  background: #539e43;
-  width: 45%;
-}
-
-.react-progress {
-  background: #00d8ff;
-  width: 20%;
-}
-
-.php-progress {
-  background: #6181b6;
-  width: 15%;
 }
 
 .skill-label {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
-
-.skill .html-label,
-.skill .css-label {
-  margin-bottom: 0;
-}
-
 
 /* Lab */
 .lab {
